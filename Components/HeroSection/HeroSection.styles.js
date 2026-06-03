@@ -274,6 +274,6 @@ export const StoreBtn = styled.div`
 
   @media (max-width: 480px) {
     width: 150px;
-    height: 48px;
+    height: 45px;
   }
 `;

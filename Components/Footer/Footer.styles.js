@@ -69,10 +69,10 @@ export const InfoBox = styled.div`
   }
 
   @media (max-width: 576px) {
-    padding: 35px 15px;
+    padding:15px;
 
     h4 {
-      font-size: 20px;
+      font-size: 16px;
       text-align: left;
     }
 
@@ -284,6 +284,6 @@ export const StoreBtn = styled.div`
 
   @media (max-width: 480px) {
     width: 150px;
-    height: 48px;
+    height: 45px;
   }
 `;

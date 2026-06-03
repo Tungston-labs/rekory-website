@@ -78,25 +78,71 @@ export const Menu = styled.div`
   &:hover::after {
     width: 100%;
   }
+  
 }
 
-  @media (max-width: 1024px) {
-    position: fixed;
-    top: 0;
-    right: ${({ $open }) => ($open ? "0" : "-100%")};
+@media (max-width: 1024px) {
+  position: fixed;
+  top: 0;
+  right: ${({ $open }) => ($open ? "0" : "-100%")};
 
-    width: 280px;
-    height: 100vh;
+  width: 320px;
+  max-width: 85%;
+  height: 100vh;
 
-    background: #111;
+  background: #151d34;
 
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  padding: 24px;
+
+  transition: right 0.35s ease;
+  z-index: 1000;
+
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.35);
+
+  .menuHeader {
+    display: flex;
     align-items: center;
-
-    transition: 0.3s ease;
-    z-index: 999;
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
+
+  .menuHeader button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .menuLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menuLinks a {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .menuLinks a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #4d73f0;
+  }
+
+  .menuLinks a::after {
+    display: none;
+  }
+}
 `;
 
 export const ButtonWrap = styled.div`
@@ -222,5 +268,16 @@ export const MobileRight = styled.div`
 
   @media (max-width: 768px) {
     gap: 8px;
+  }
+`;
+export const MenuOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+
+  @media (min-width: 1025px) {
+    display: none;
   }
 `;

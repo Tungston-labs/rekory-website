@@ -14,9 +14,10 @@ import {
   WhiteBtn,
   BlueBtn,
   Hamburger,
-  MobileRight
+  MobileRight,
+  MenuOverlay
 } from "./Navbar.styles";
-
+import { handleDownloadApp } from "../../utils/downloadApp";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -30,27 +31,40 @@ export default function Navbar() {
   return (
  <Nav>
   <Wrapper>
-    <Logo>
-      <Image src={logo} alt="logo" priority />
-    </Logo>
+   <Logo>
+  <Link href="/" onClick={() => setOpen(false)}>
+    <Image src={logo} alt="logo" priority />
+  </Link>
+</Logo>
+{open && <MenuOverlay onClick={() => setOpen(false)} />}
+<Menu $open={open}>
+  <div className="menuHeader">
+    <Image src={logo} alt="logo" width={40} height={40} />
 
-    <Menu $open={open}>
-      {menu.map((item) => (
-        <a
-          key={item.title}
-          href={item.path}
-          onClick={() => setOpen(false)}
-        >
-          {item.title}
-        </a>
-      ))}
-    </Menu>
+    <button onClick={() => setOpen(false)}>
+      ✕
+    </button>
+  </div>
 
+  <div className="menuLinks">
+    {menu.map((item) => (
+      <a
+        key={item.title}
+        href={item.path}
+        onClick={() => setOpen(false)}
+      >
+        {item.title}
+      </a>
+    ))}
+  </div>
+</Menu>
     <MobileRight>
-      <WhiteBtn>Download APP <BsArrowUpRightCircle/> </WhiteBtn>
-<Link href="#app-advantages">
+<WhiteBtn onClick={handleDownloadApp}>
+  Download APP <BsArrowUpRightCircle />
+</WhiteBtn>
+<Link href="/#app-advantages">
   <BlueBtn>
-    Contact Our Team <BsArrowUpRightCircle />
+    Contact Us <BsArrowUpRightCircle />
   </BlueBtn>
 </Link>
 

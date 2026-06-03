@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 768px) {
     padding: 20px 12px;
+        background-color: #151D34;
   }
 `;
 
