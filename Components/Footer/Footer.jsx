@@ -7,104 +7,128 @@ import {
   TopSection,
   InfoBox,
   MiddleSection,
-  LeftImage,
+  LeftShape,
+  RightShape,
   Content,
   StoreButtons,
-  Shape,
   BottomBar,
+  StoreBtn,
 } from "./Footer.styles";
-
+import { FiPhoneCall } from "react-icons/fi";
+import { SlLocationPin } from "react-icons/sl";
+import { IoIosAt } from "react-icons/io";
+import Link from "next/link";
 export default function Footer() {
   return (
     <FooterWrapper>
+      {/* TOP SECTION */}
       <TopSection>
         <InfoBox>
-          <h4>☎ Our Phone Number</h4>
-          <p>+971 555738021</p>
+          <h4><FiPhoneCall/> Our Phone Number</h4>
+          <p>+971 555736021</p>
         </InfoBox>
 
         <InfoBox>
-          <h4>◎ Our Location</h4>
+          <h4><SlLocationPin/> Our Location</h4>
           <p>
-            Tungston Labs, Ulimpilly Building
-            4th Floor, Behind Olympus
-            Juma Masjid Thrikkakara,
-            Kakkanad, Kochi
+            Tungston Labs, Ullampilly Building, 4th Floor,
+            <br />
+            Behind Olimugal Juma Masjid, Thrikkakara,
+            <br />
+            Vazhakkala, Kakkanad, Kerala 682030
           </p>
         </InfoBox>
 
         <InfoBox>
-          <h4>✉ Our Email ID</h4>
-          <p>support@arm.com</p>
+          <h4><IoIosAt/> Our Email ID</h4>
+          <p>support@arm-sbc.com</p>
         </InfoBox>
       </TopSection>
 
+      {/* MIDDLE SECTION */}
       <MiddleSection>
-
-        <LeftImage>
+        <LeftShape>
           <Image
-            src="/images/phone-person.svg"
-            alt="Phone"
-            width={250}
-            height={450}
+            src="/images/wave-shape.svg"
+            alt="shape"
+            width={420}
+            height={420}
           />
-        </LeftImage>
+        </LeftShape>
 
         <Content>
           <Image
             className="logo"
             src="/images/logo.svg"
-            alt="Logo"
+            alt="logo"
             width={90}
             height={90}
           />
 
           <p>
             Rekory is a smart HR management platform that simplifies employee
-            management, attendance tracking, payroll processing and
-            reimbursements through a powerful real-time dashboard.
+            management, attendance tracking, payroll processing,
+            reimbursements, and workforce operations through a powerful
+            real-time dashboard.
           </p>
 
-          <StoreButtons>
-            <Image
-              src="/images/google-play.svg"
-              alt="Google Play"
-              width={170}
-              height={50}
-            />
+        <StoreButtons>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.anonymous.Rekory&hl=en_IN"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <StoreBtn>
+      <Image
+        src="/images/footer/google-play.png"
+        alt="google-play"
+        fill
+      />
+    </StoreBtn>
+  </a>
 
-            <Image
-              src="/images/app-store.svg"
-              alt="App Store"
-              width={170}
-              height={50}
-            />
-          </StoreButtons>
+  <a
+    href="https://apps.apple.com/us/app/rekory/id6759279994"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <StoreBtn>
+      <Image
+        src="/images/footer/app-store.png"
+        alt="app-store"
+        fill
+      />
+    </StoreBtn>
+  </a>
+</StoreButtons>
         </Content>
 
-        <Shape>
+        <RightShape>
           <Image
             src="/images/wave-shape.svg"
             alt="shape"
-            width={350}
-            height={350}
+            width={420}
+            height={420}
           />
-        </Shape>
-
+        </RightShape>
       </MiddleSection>
 
-      <BottomBar>
-        <div className="left">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
-        </div>
+      {/* BOTTOM BAR */}
+    <BottomBar>
+  <div className="left">
+    <Link href="/terms-and-conditions">
+      Terms & Conditions
+    </Link>
 
-        <span>
-          © Copyright 2026, REKORY.
-          Designed by Tungston Labs.
-        </span>
-      </BottomBar>
+    <Link href="/privacy-policy">
+      Privacy Policy
+    </Link>
+  </div>
 
+  <div className="right">
+    © Copyright 2026, REKORY. Designed By Tungston Labs.
+  </div>
+</BottomBar>
     </FooterWrapper>
   );
 }

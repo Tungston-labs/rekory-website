@@ -2,6 +2,7 @@ import StyledComponentsRegistry from "../lib/StyledComponentsRegistry";
 import "./globals.css";
 
 import { DM_Sans } from "next/font/google";
+import MouseGlow from "../Components/MouseGlow /MouseGlow";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -18,7 +19,11 @@ export default function RootLayout({
     <html lang="en" className={dmSans.variable}>
       <body className={dmSans.className}>
         <StyledComponentsRegistry>
+
+          <MouseGlow />
+
           {children}
+
         </StyledComponentsRegistry>
       </body>
     </html>

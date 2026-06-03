@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 40px 20px;
-  background: #09112b;
+  background: #080B11;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,10 +20,10 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1150px;
+  max-width: 1700px;
   background: #2F4CA9;
   border-radius: 14px;
-  padding: 60px 40px;
+  padding: 60px 70px 90px;
   position: relative;
   overflow: hidden;
 
@@ -38,33 +38,43 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 32px;
   color: #fff;
   text-align: center;
-  font-weight: 700;
   margin-bottom: 14px;
+font-weight: 500;
+font-style: Medium;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: capitalize;
+
 
   @media (max-width: 768px) {
     font-size: 24px;
     line-height: 34px;
   }
 
-  @media (max-width: 480px) {
-    font-size: 20px;
+  @media (max-width: 570px) {
+    font-size: 16px;
     line-height: 30px;
   }
 `;
 
 export const SubTitle = styled.p`
-  max-width: 720px;
+  max-width: 850px;
   margin: 0 auto 40px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  line-height: 28px;
+  color: #fff;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: 2%;
+text-align: center;
 
   @media (max-width: 576px) {
-    font-size: 13px;
+    font-size:14px;
     line-height: 24px;
     margin-bottom: 28px;
   }
@@ -74,7 +84,7 @@ export const Card = styled.div`
   width: 100%;
   background: #f3f3f3;
   border-radius: 10px;
-  padding: 40px;
+  padding: 40px 40px 80px;
 
   @media (max-width: 768px) {
     padding: 24px 18px;
@@ -101,12 +111,12 @@ export const Item = styled.div`
 `;
 
 export const Icon = styled.div`
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   min-width: 22px;
   border-radius: 50%;
-  background: #dce4ff;
-  color: #2f4cb7;
+  background:rgb(237, 237, 252);
+  color: #2F4CA9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,28 +130,35 @@ export const Content = styled.div`
 `;
 
 export const ItemTitle = styled.h3`
-  font-size: 17px;
-  font-weight: 700;
-  color: #1b1b1b;
-  margin-bottom: 8px;
+font-weight: 700;
+margin-bottom: 8px;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 20px;
+letter-spacing: 0px;
+vertical-align: middle;
 
   @media (max-width: 576px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 `;
 
 export const Description = styled.p`
-  font-size: 14px;
-  line-height: 26px;
-  color: #4a4a4a;
-  margin-bottom: 8px;
+  color:rgb(0, 0, 0);
+font-weight: 300;
+font-style: Light;
+font-size: 16px;
+line-height: 28px;
+letter-spacing: 0px;
+vertical-align: middle;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (max-width: 576px) {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 23px;
   }
 `;

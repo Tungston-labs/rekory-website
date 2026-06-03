@@ -1,6 +1,10 @@
-import { hrSectionData } from "../../data/hrSectionData";
-import HRCard from "./HRCard";
+"use client";
 
+import { useState } from "react";
+import HRCard from "./HRCard";
+import { rekoryData } from "../../data/hrSectionData";
+import { trackproData } from "../../data/trackproData";
+import { BsArrowUpRightCircle } from "react-icons/bs";
 import {
   Section,
   Container,
@@ -13,29 +17,44 @@ import {
 } from "./HRSection.styles";
 
 export default function HRSection() {
+
+  const [data, setData] = useState(rekoryData);
+
   return (
-    <Section>
-      <Container>
+    <Section id="why-rekory">
+     <Container $bgColor={data.bgColor}>
 
         <Top>
-          <p>Why Choose Rekory App</p>
-
+          <p>{data.topTag}</p>
           <Heading>
-            Ready To Transform Your HR Management?
+            {data.heading}
           </Heading>
 
           <SubText>
-      Power-Packed HR Tools, All in one place say goodbye to scattered sysytems-Rekory brings together everything you need to manage your workforce efficiently: Onboarding, attendance, payroll, leaves, and more.
+            {data.subText}
           </SubText>
+<ButtonWrap>
+  <Btn
+    $active={data === rekoryData}
+    color="#2341a8"
+    onClick={() => setData(rekoryData)}
+  >
+    REKORY APP <BsArrowUpRightCircle/>
+  </Btn>
 
-          <ButtonWrap>
-            <Btn>Rekory App ↗</Btn>
-            <Btn>TRACKPRO APP ↗</Btn>
-          </ButtonWrap>
+  <Btn
+    $active={data === trackproData}
+    color="#BD0D12"
+    onClick={() => setData(trackproData)}
+  >
+    TRACKPOD APP <BsArrowUpRightCircle/>
+  </Btn>
+</ButtonWrap>
+
         </Top>
 
         <Grid>
-          {hrSectionData.map((item)=>(
+          {data.cards.map((item) => (
             <HRCard
               key={item.id}
               {...item}

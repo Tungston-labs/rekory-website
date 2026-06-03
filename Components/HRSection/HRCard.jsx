@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import {
   Card,
   SmallTag,
@@ -8,35 +9,45 @@ import {
   ImageWrap,
 } from "./HRSection.styles";
 
-export default function HRCard(item) {
+export default function HRCard({
+  tag,
+  title,
+  description,
+  points,
+  image
+}) {
   return (
     <Card>
-      <SmallTag>{item.tag}</SmallTag>
 
-      <Title>{item.title}</Title>
+      <SmallTag>{tag}</SmallTag>
 
-      {item.description && (
-        <Description>{item.description}</Description>
+      <Title>{title}</Title>
+
+      {description && (
+        <Description>
+          {description}
+        </Description>
       )}
 
-      {item.points && (
-        <List>
-          {item.points.map((point, index) => (
-            <li key={index}>✓ {point}</li>
-          ))}
-        </List>
-      )}
+     {points && (
+          <List>
+            {points.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </List>
+        )}
 
-      {item.image && (
+      {image && (
         <ImageWrap>
-          <Image
-            src={item.image}
-            alt={item.title}
-            width={500}
-            height={300}
-          />
+        <Image
+  src={image}
+  alt={title}
+  width={760}
+  height={340}
+/>
         </ImageWrap>
       )}
+
     </Card>
   );
 }

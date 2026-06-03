@@ -13,8 +13,8 @@ export default function FeatureCard({
           <Image
             src={icon}
             alt={title}
-            width={24}
-            height={24}
+            width={70}
+            height={70}
           />
         ) : null}
       </IconBox>
