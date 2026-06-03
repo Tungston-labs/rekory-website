@@ -132,13 +132,13 @@ export const StoreButtons = styled.div`
 export const FeatureCard = styled.div`
   position: absolute;
   z-index: 10;
-  width: 230px;
-  height: 80px;
+  width: 250px;
+  height: 90px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
   background: rgba(10, 10, 15, 0.4);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
 
   display: flex;
   flex-direction: column;
@@ -155,7 +155,7 @@ export const FeatureCard = styled.div`
 
   h4 {
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
   }
 

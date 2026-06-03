@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   background:#080B11;
-  padding:20px 60px;
+  padding:20px;
 
     @media (max-width: 1024px) {
     padding:20px;
@@ -19,7 +19,7 @@ export const Nav = styled.nav`
 export const Wrapper = styled.div`
   max-width: 1700px;
   margin: auto;
-justify-content: space-between;
+ justify-content: space-between;
   display: flex;
   align-items: center;
 `;
@@ -53,8 +53,8 @@ export const Menu = styled.div`
 
   font-family: DM Sans;
   font-weight: 500;
-  font-size: 16px;
-  text-transform: capitalize;
+  font-size: 17px;
+  text-transform: uppercase;
 
   transition: color 0.3s ease;
 
@@ -78,7 +78,14 @@ export const Menu = styled.div`
   &:hover::after {
     width: 100%;
   }
-  
+}
+
+.menuHeader {
+  display: none;
+}
+
+.menuLinks {
+  display: contents;
 }
 
 @media (max-width: 1024px) {
@@ -163,7 +170,7 @@ export const WhiteBtn = styled.button`
   border-radius: 8px;
   padding: 12px 20px;
   cursor: pointer;
-
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -209,7 +216,7 @@ export const BlueBtn = styled.button`
   border-radius: 8px;
   padding: 12px 20px;
   cursor: pointer;
-
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -277,7 +284,7 @@ export const MenuOverlay = styled.div`
   backdrop-filter: blur(3px);
   z-index: 999;
 
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;

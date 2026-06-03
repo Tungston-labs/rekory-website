@@ -6,6 +6,7 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   padding:0px 38px 56px;
+  
   background: #151d34;
 
   @media(max-width:768px){
