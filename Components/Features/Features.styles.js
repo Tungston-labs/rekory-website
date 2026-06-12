@@ -176,6 +176,9 @@ export const Description = styled.p`
   font-size: 16px;
   text-align: center;
 
+   @media(max-width:1200px){
+    font-size: 14px;
+  }
   @media (max-width: 768px) {
     font-size: 15px;
   }

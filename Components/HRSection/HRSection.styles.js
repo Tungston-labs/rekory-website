@@ -215,6 +215,10 @@ line-height: 28px;
 letter-spacing: 0px;
 vertical-align: middle;
 
+
+ @media(max-width:1200px){
+    font-size: 14px;
+  }
   @media (max-width: 570px) {
     font-size: 0.9rem;
     line-height: 24px;
@@ -267,6 +271,9 @@ vertical-align: middle;
     }
   }
 
+   @media(max-width:1200px){
+   li{ font-size: 14px;}
+  }
   @media (max-width: 768px) {
     li {
       font-size: 17px;

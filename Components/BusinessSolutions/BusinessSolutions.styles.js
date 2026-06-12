@@ -337,6 +337,9 @@ export const GridContainer = styled.div`
   row-gap: 20px;
   align-items: start;
 
+   @media(max-width:1440px){
+      grid-template-columns: 450px 1fr  ;
+  }
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
     grid-template-areas: 

@@ -142,7 +142,9 @@ export const Text = styled.p`
   line-height: 1.85;
   letter-spacing: 0;
 
-
+ @media(max-width:1200px){
+    font-size: 14px;
+  }
   @media(max-width:768px){
     font-size: 16px;
   }
